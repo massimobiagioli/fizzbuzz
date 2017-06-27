@@ -2,4 +2,3 @@ test:
     php_unit:
         config:
             - "phpunit.xml"        
-        args: "--bootstrap 'bootstrap/bootstrap.php'"
