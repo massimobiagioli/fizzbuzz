@@ -1,4 +1,5 @@
 test:
     php_unit:
         config:
-            - "phpunit.xml"        
+            - "phpunit.xml" 
+        args: "--bootstrap 'bootstrap/bootstrap.php'"    
