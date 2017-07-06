@@ -7,7 +7,6 @@ test:
         config:
             - "phpunit.xml" 
             
-    php_code_sniffer:
-        path: "program"        
+    php_code_sniffer:        
         standard: "PSR1,PSR2"            
         
