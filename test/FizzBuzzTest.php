@@ -12,7 +12,8 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup Test
      */
-    protected function setUp() {
+    protected function setUp() 
+    {
         $this->fizzBuzz = new \App\FizzBuzz();
     }
     
@@ -87,6 +88,9 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));        
     }
     
+    /**
+     * Simula gioco fizzbuzz con una sequenza di numeri da 1 a 100
+     */
     public function testPrintSequence()
     {
         for ($i = 1; $i <= 100; $i++) {
@@ -96,5 +100,4 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
             }
         }
     }
-    
 }
