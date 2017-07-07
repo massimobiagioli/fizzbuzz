@@ -2,7 +2,7 @@
 
 namespace AppTest;
 
-class FizzBuzzTest extends PHPUnit_Framework_TestCase 
+class FizzBuzzTest extends \PHPUnit_Framework_TestCase 
 {
 
     /**
@@ -10,7 +10,7 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
      */
     public function testClassFizzBuzzExists() 
     {        
-        $fb = new App\FizzBuzz();
+        $fb = new \App\FizzBuzz();
         $this->assertNotNull($fb);
     }
         
