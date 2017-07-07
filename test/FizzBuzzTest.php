@@ -9,7 +9,9 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
 {
     private $fizzBuzz;
     
-    
+    /**
+     * Setup Test
+     */
     protected function setUp() {
         $this->fizzBuzz = new \App\FizzBuzz();
     }
@@ -47,6 +49,52 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     {
         $number = 3;
         $this->assertEquals('fizz', $this->fizzBuzz->process($number));
+    }
+
+    /**
+     * Controlla che in corrispondenza del numero 5 esca 'buzz'
+     */
+    public function testNumberFiveIsBuzz()
+    {
+        $number = 5;
+        $this->assertEquals('buzz', $this->fizzBuzz->process($number));
+    }
+    
+    /**
+     * Controlla che in corrispondenza di un numero multiplo di 3 esca 'fizz'
+     */
+    public function testNumberMultipleOfThreeIsFizz()
+    {
+        $number = 6;
+        $this->assertEquals('fizz', $this->fizzBuzz->process($number));        
+    }
+    
+    /**
+     * Controlla che in corrispondenza di un numero multiplo di 5 esca 'buzz'
+     */
+    public function testNumberMultipleOfFiveIsBuzz()
+    {
+        $number = 10;
+        $this->assertEquals('buzz', $this->fizzBuzz->process($number));        
+    }
+    
+    /**
+     * Controlla che in corrispondenza di un numero multiplo di 3 e di 5 esca 'fizzbuzz'
+     */
+    public function testNumberMultipleOfThreeAndFiveIsFizzBuzz()
+    {
+        $number = 15;
+        $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));        
+    }
+    
+    public function testPrintSequence()
+    {
+        for ($i = 1; $i <= 100; $i++) {
+            echo $this->fizzBuzz->process($i);
+            if ($i < 100) {
+                echo ' - ';
+            }
+        }
     }
     
 }
