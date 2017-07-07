@@ -12,7 +12,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup Test
      */
-    protected function setUp() 
+    protected function setUp()
     {
         $this->fizzBuzz = new \App\FizzBuzz();
     }
@@ -67,7 +67,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNumberMultipleOfThreeIsFizz()
     {
         $number = 6;
-        $this->assertEquals('fizz', $this->fizzBuzz->process($number));        
+        $this->assertEquals('fizz', $this->fizzBuzz->process($number));
     }
     
     /**
@@ -76,7 +76,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNumberMultipleOfFiveIsBuzz()
     {
         $number = 10;
-        $this->assertEquals('buzz', $this->fizzBuzz->process($number));        
+        $this->assertEquals('buzz', $this->fizzBuzz->process($number));  
     }
     
     /**
@@ -85,7 +85,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNumberMultipleOfThreeAndFiveIsFizzBuzz()
     {
         $number = 15;
-        $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));        
+        $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));   
     }
     
     /**
