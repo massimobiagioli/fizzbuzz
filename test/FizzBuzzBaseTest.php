@@ -86,5 +86,5 @@ class FizzBuzzBaseTest extends \PHPUnit_Framework_TestCase
     {
         $number = 15;
         $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));
-    }    
+    }
 }

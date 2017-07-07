@@ -14,6 +14,7 @@ class FizzBuzz
      */
     public function process($number)
     {
+        // Considera la divisibilità per 3, 5 e 7
         if (($number % 3 === 0) && ($number % 5 === 0) && ($number % 7 === 0)) {
             return 'fizzbuzzpop';
         } else {
@@ -21,8 +22,13 @@ class FizzBuzz
         }
     }
     
-    private function processTwoConditions($number) 
-    {    
+    /**
+     * Process numero considerando la divisibilità per due numeri
+     * @param int $number Numero da processare
+     * @return string Numero processato secondo le regole del gioco
+     */
+    private function processTwoConditions($number)
+    {
         if (($number % 3 === 0) && ($number % 7 === 0)) {
             return 'fizzpop';
         } elseif (($number % 5 === 0) && ($number % 7 === 0)) {
@@ -34,6 +40,11 @@ class FizzBuzz
         }
     }
     
+    /**
+     * Process numero considerando la divisibilità per un solo numero
+     * @param int $number Numero da processare
+     * @return string Numero processato secondo le regole del gioco
+     */
     private function processOneCondition($number)
     {
         if ($number % 3 === 0) {
@@ -43,6 +54,7 @@ class FizzBuzz
         } elseif ($number % 7 === 0) {
             return 'pop';
         } else {
+            // In questo caso, ritorna il numero stesso
             return $number;
         }
     }
