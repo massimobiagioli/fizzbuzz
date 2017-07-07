@@ -5,7 +5,7 @@ namespace AppTest;
 /**
  * Test FizzBuzz Kata
  */
-class FizzBuzzTest extends \PHPUnit_Framework_TestCase
+class FizzBuzzBaseTest extends \PHPUnit_Framework_TestCase
 {
     private $fizzBuzz;
     
@@ -80,60 +80,11 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * Controlla che in corrispondenza di un numero multiplo di 7 esca 'pop'
-     */
-    public function testNumberMultipleOfSevenIsPop()
-    {
-        $number = 7;
-        $this->assertEquals('pop', $this->fizzBuzz->process($number));
-    }
-    
-    /**
      * Controlla che in corrispondenza di un numero multiplo di 3 e di 5 esca 'fizzbuzz'
      */
     public function testNumberMultipleOfThreeAndFiveIsFizzBuzz()
     {
         $number = 15;
         $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));
-    }
-    
-    /**
-     * Controlla che in corrispondenza di un numero multiplo di 3 e di 7 esca 'fizzpop'
-     */
-    public function testNumberMultipleOfThreeAndSevenIsFizzPop()
-    {
-        $number = 21;
-        $this->assertEquals('fizzpop', $this->fizzBuzz->process($number));
-    }
-    
-    /**
-     * Controlla che in corrispondenza di un numero multiplo di 5 e di 7 esca 'buzzpop'
-     */
-    public function testNumberMultipleOfFiveAndSevenIsBuzzPop()
-    {
-        $number = 35;
-        $this->assertEquals('buzzpop', $this->fizzBuzz->process($number));
-    }
-    
-    /**
-     * Controlla che in corrispondenza di un numero multiplo di 3, 5 e 7 esca 'fizzbuzzpop'
-     */
-    public function testNumberMultipleOfThreeAndFiveAndSevenIsFizzBuzzPop()
-    {
-        $number = 105;
-        $this->assertEquals('fizzbuzzpop', $this->fizzBuzz->process($number));
-    }
-    
-    /**
-     * Simula gioco fizzbuzz con una sequenza di numeri da 1 a 500
-     */
-    public function testPrintSequence()
-    {
-        for ($i = 1; $i <= 500; $i++) {
-            echo $this->fizzBuzz->process($i);
-            if ($i < 500) {
-                echo ' - ';
-            }
-        }
-    }
+    }    
 }
