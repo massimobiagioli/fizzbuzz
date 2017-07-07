@@ -76,7 +76,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNumberMultipleOfFiveIsBuzz()
     {
         $number = 10;
-        $this->assertEquals('buzz', $this->fizzBuzz->process($number));  
+        $this->assertEquals('buzz', $this->fizzBuzz->process($number));
     }
     
     /**
@@ -85,7 +85,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function testNumberMultipleOfThreeAndFiveIsFizzBuzz()
     {
         $number = 15;
-        $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));   
+        $this->assertEquals('fizzbuzz', $this->fizzBuzz->process($number));
     }
     
     /**
