@@ -5,7 +5,7 @@ namespace App;
 /**
  * The FizzBuzz Kata
  */
-class FizzBuzz 
+class FizzBuzz
 {
-    
+
 }
