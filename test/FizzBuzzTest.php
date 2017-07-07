@@ -16,5 +16,4 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
         $fizzBuzz = new \App\FizzBuzz();
         $this->assertNotNull($fizzBuzz);
     }
-    
 }
